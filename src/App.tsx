@@ -1,4 +1,10 @@
 // import { useState } from 'react'
+import { ReactNode } from 'react';
+
+interface ResusableButtonProps {
+  children: ReactNode;
+  className?: string;
+}
 
 import "./App.css";
 
@@ -264,7 +270,7 @@ function Projects() {
   );
 }
 
-function ResusableButton({ children, className }) {
+function ResusableButton({ children, className }: ResusableButtonProps) {
   return (
     <button className={`resusable-button ${className}`}>{children}</button>
   );
@@ -450,7 +456,7 @@ function WhatPeopleSay() {
             </div>
 
             <div className="service-details">
-              <h3 className="service-title">{review.Title}</h3>
+              
               <p className="service-year">{review.Year}</p>
             </div>
           </li>
@@ -487,7 +493,7 @@ function Investments() {
             <li key={investments.id} className="news-item">
               <img
                 src={investments.image}
-                alt={news.name}
+              
                 className="news-image"
               />
               <div className="news-description">

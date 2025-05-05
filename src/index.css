@@ -47,6 +47,7 @@ ul.work-list {
   padding: 40px 30px; /* Remove default padding */
   margin: 0; /* Remove default margin */
 }
+
 .project-list {
   list-style-type: none; /* Remove default bullets */
   padding: 0; /* Remove default padding */
