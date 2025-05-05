@@ -484,4 +484,11 @@ section{
  .main{
   width: 100%;
   margin-left: 0px;
+}
+.social-item {
+  display: flex
+;
+  align-items: center;
+  gap: 15px;
+  padding: 0px;
 }}
