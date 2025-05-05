@@ -4,7 +4,9 @@
 *{
     font-family: 'montserrat';
 }
-
+body{
+  padding: 10px;
+}
 .flex-body{
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -481,4 +483,5 @@ section{
  }
  .main{
   width: 100%;
+  margin-left: 0px;
 }}
