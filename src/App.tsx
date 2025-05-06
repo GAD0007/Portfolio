@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import { ReactNode } from 'react';
+import { useState } from 'react';
 
 interface ResusableButtonProps {
   children: ReactNode;
@@ -176,24 +177,61 @@ function App() {
     </>
   );
 }
+
+
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <div className="Sidebar">
+      {/* Hamburger menu icon */}
+     <div className='test'>
+     <button className="hamburger" onClick={() => setIsOpen(true)}>
+        &#9776;
+      </button>
+     </div>
+
+      {/* Sidebar Overlay */}
+      <div className={`Sidebar ${isOpen ? 'open' : ''}`}>
+        <button className="close-btn" onClick={() => setIsOpen(false)}>
+          &times;
+        </button>
+
         <div className="profile-box">
-          <div>
-            <img src="/dp.png" alt="display picture" />
-          </div>
+          <img src="/dp.png" alt="display picture" />
           <div className="name-titile">
             <div className="dev-name">Adejumo Ibukun</div>
             <div className="dev-role">Web Developer</div>
           </div>
-          <NavList />
         </div>
+
+        <NavList />
       </div>
+
+      {/* Optional: Overlay background when open */}
+      {isOpen && <div className="overlay" onClick={() => setIsOpen(false)}></div>}
     </>
   );
 }
+
+// function Sidebar() {
+//   return (
+//     <>
+//       <div className="Sidebar">
+//         <div className="profile-box">
+//           <div>
+//             <img src="/dp.png" alt="display picture" />
+//           </div>
+//           <div className="name-titile">
+//             <div className="dev-name">Adejumo Ibukun</div>
+//             <div className="dev-role">Web Developer</div>
+//           </div>
+//           <NavList />
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
 function MainBody() {
   return (
