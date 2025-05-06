@@ -1,6 +1,6 @@
 // import { useState } from 'react'
-import { ReactNode } from 'react';
-import { useState } from 'react';
+import { ReactNode } from "react";
+import { useState } from "react";
 
 interface ResusableButtonProps {
   children: ReactNode;
@@ -47,9 +47,21 @@ const projects = [
   },
   {
     id: 3,
-    name: "Project Three",
-    description: "This is the third project",
-    image: "/path-to-image3.jpg",
+    name: "www.animogifts.com",
+    description: "An ecommerce webste built with Vanilla JS, PHP and paystack API to handle payments..Mobile responsive✅",
+    image: "/giftbox (2).png",
+  },
+  {
+    id: 4,
+    name: "https://usepopcorn-snowy.vercel.app/",
+    description: "A IMBD clone where users can search and rate movies, built with react..Mobile responsive❌",
+    image: "clapperboard.png",
+  },
+  {
+    id: 5,
+    name: "https://sneakers-shop-mu.vercel.app/",
+    description: "A shoe ecommerce site, built with Vanilla JS ..Mobile responsive✅",
+    image: "shoes.png",
   },
 ];
 const news = [
@@ -133,13 +145,13 @@ const services = [
   {
     id: 1,
     Title: "Web Design",
-    Year: "Looking to build a website for your enterprise or goods? I create efficient Framer webpages that attract clients.",
+    Year: "Looking to build a website for your enterprise? I create efficient responsive websites that attract clients.",
     Poster: "person-front-computer-working-html (1).png",
   },
   {
     id: 2,
-    Title: "Graphics Design",
-    Year: "I dont just build websites, I am also an expert in graphic designing with vast knowlege in using diffrent tools",
+    Title: "Product Design",
+    Year: "I dont just build websites, I am also an expert in product designing  with vast knowlege in using diffrent tools",
     Poster: "photo-editor-histogram-setting-concept (1).png",
   },
 ];
@@ -178,21 +190,20 @@ function App() {
   );
 }
 
-
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       {/* Hamburger menu icon */}
-     <div className='test'>
-     <button className="hamburger" onClick={() => setIsOpen(true)}>
-        &#9776;
-      </button>
-     </div>
+      <div className="test">
+        <button className="hamburger" onClick={() => setIsOpen(true)}>
+          &#9776;
+        </button>
+      </div>
 
       {/* Sidebar Overlay */}
-      <div className={`Sidebar ${isOpen ? 'open' : ''}`}>
+      <div className={`Sidebar ${isOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={() => setIsOpen(false)}>
           &times;
         </button>
@@ -209,7 +220,9 @@ function Sidebar() {
       </div>
 
       {/* Optional: Overlay background when open */}
-      {isOpen && <div className="overlay" onClick={() => setIsOpen(false)}></div>}
+      {isOpen && (
+        <div className="overlay" onClick={() => setIsOpen(false)}></div>
+      )}
     </>
   );
 }
@@ -271,19 +284,10 @@ function Home() {
           <span className="gray-text"> and building digital businesses</span>
         </h1>
         <p>
-          Jake Robinson is a versatile designer with a unique blend of
-          creativity and technical expertise. With a keen eye for aesthetics and
-          a passion for innovation, Jake excels in branding, bringing to life
-          visually striking and memorable identities that resonate with target
-          audiences.
-        </p>
-
-        <p>
-          In the realm of product design, Jake combines functionality with
-          cutting-edge design principles to create user-friendly and marketable
-          products. Outside of the design studio, he is also an accomplished
-          hula hooper, showcasing a remarkable ability to balance artistic
-          expression.
+          Adejumo Ibukun is a frontend developer with a strong blend of
+          creativity and technical expertise. I specialize in building
+          visually engaging, user-focused interfaces and turning design ideas
+          into responsive, interactive web experiences.
         </p>
 
         <div className="flex-btn-container">
@@ -494,7 +498,6 @@ function WhatPeopleSay() {
             </div>
 
             <div className="service-details">
-              
               <p className="service-year">{review.Year}</p>
             </div>
           </li>
@@ -529,11 +532,7 @@ function Investments() {
         <ul className="project-list">
           {investments.map((investments) => (
             <li key={investments.id} className="news-item">
-              <img
-                src={investments.image}
-              
-                className="news-image"
-              />
+              <img src={investments.image} className="news-image" />
               <div className="news-description">
                 <h3>{investments.name}</h3>
                 <p>{investments.description}</p>
