@@ -11,14 +11,14 @@ import "./App.css";
 
 const sections = [
   { name: "Home", id: "home" },
-  { name: "Skills", id: "work" },
+  { name: "Skills", id: "skills" },
   { name: "Live Projects", id: "projects" },
   { name: "Services", id: "services" },
   { name: "Newsletter", id: "newsletter" },
   { name: "What Others Say", id: "what-others-say" },
   { name: "Investments", id: "investments" },
   { name: "Social", id: "social" },
-  { name: "Blog", id: "blog" },
+  
 ];
 
 const works = [
@@ -35,33 +35,33 @@ const works = [
 const projects = [
   {
     id: 1,
-    name: "Project One",
-    description: "This is the first project",
-    image: "/path-to-image1.jpg",
+    name: "www.animogifts.com",
+    description: "An ecommerce website built with Wordpress, Vanilla JS, PHP and paystack API to handle payments..Mobile responsive✅",
+    image: "/8.png",
   },
   {
     id: 2,
-    name: "Project Two",
-    description: "This is the second project",
-    image: "/path-to-image2.jpg",
+    name: "https://to-do-app-ten-jade.vercel.app/",
+    description: "A to-do website built with React.. Mobile responsive✅",
+    image: "/check-list.png",
   },
   {
     id: 3,
-    name: "www.animogifts.com",
-    description: "An ecommerce webste built with Vanilla JS, PHP and paystack API to handle payments..Mobile responsive✅",
-    image: "/giftbox (2).png",
-  },
-  {
-    id: 4,
     name: "https://usepopcorn-snowy.vercel.app/",
     description: "A IMBD clone where users can search and rate movies, built with react..Mobile responsive❌",
     image: "clapperboard.png",
   },
   {
-    id: 5,
+    id: 4,
     name: "https://sneakers-shop-mu.vercel.app/",
     description: "A shoe ecommerce site, built with Vanilla JS ..Mobile responsive✅",
     image: "shoes.png",
+  },
+  {
+    id: 5,
+    name: "https://consultancysite.vercel.app/",
+    description: "A consultancy site, built with HTML and CSS ..Mobile responsive✅",
+    image: "imagenew.png",
   },
 ];
 const news = [
@@ -193,18 +193,18 @@ function App() {
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeSidebar = () => setIsOpen(false);
+
   return (
     <>
-      {/* Hamburger menu icon */}
       <div className="test">
         <button className="hamburger" onClick={() => setIsOpen(true)}>
           &#9776;
         </button>
       </div>
 
-      {/* Sidebar Overlay */}
       <div className={`Sidebar ${isOpen ? "open" : ""}`}>
-        <button className="close-btn" onClick={() => setIsOpen(false)}>
+        <button className="close-btn" onClick={closeSidebar}>
           &times;
         </button>
 
@@ -216,16 +216,15 @@ function Sidebar() {
           </div>
         </div>
 
-        <NavList />
+        {/* Pass the close function down */}
+        <NavList closeSidebar={closeSidebar} />
       </div>
 
-      {/* Optional: Overlay background when open */}
-      {isOpen && (
-        <div className="overlay" onClick={() => setIsOpen(false)}></div>
-      )}
+      {isOpen && <div className="overlay" onClick={closeSidebar}></div>}
     </>
   );
 }
+
 
 // function Sidebar() {
 //   return (
@@ -263,7 +262,7 @@ function MainBody() {
 }
 function Home() {
   return (
-    <section className="home">
+    <section className="home" id="home">
       <div>
         <div className="online-box">
           <div>
@@ -303,7 +302,7 @@ function Home() {
 
 function Projects() {
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <div>
         <h2>Live Projects</h2>
         <ProjectList />
@@ -319,7 +318,7 @@ function ResusableButton({ children, className }: ResusableButtonProps) {
 }
 function WorkCard() {
   return (
-    <section>
+    <section id="skills">
       <div>
         <h2> Skills</h2>
         <WorkList />
@@ -347,7 +346,7 @@ function WorkList() {
 }
 function Services() {
   return (
-    <section className="services">
+    <section className="services" id="services">
       <div>
         <h2>Services</h2>
         <ServicesList />
@@ -379,20 +378,35 @@ function ServicesList() {
   );
 }
 
-function NavList() {
+type NavListProps = {
+  closeSidebar: () => void;
+};
+
+function NavList({ closeSidebar }: NavListProps) {
   return (
     <ul className="list">
       {sections.map((section) => (
-        <li key={section.id}> {section.name}</li>
+        <li key={section.id}>
+          <a
+            href={`#${section.id}`}
+            className="nav-link"
+            onClick={closeSidebar}
+          >
+            {section.name}
+          </a>
+        </li>
       ))}
     </ul>
   );
 }
+
+
 function ProjectList() {
   return (
     <ul className="project-list">
       {projects.map((project) => (
         <li key={project.id} className="project-item">
+            <a className="project-link" href={`${project.name}`}>
           <img
             src={project.image}
             alt={project.name}
@@ -402,6 +416,7 @@ function ProjectList() {
             <h3>{project.name}</h3>
             <p>{project.description}</p>
           </div>
+          </a>
         </li>
       ))}
     </ul>
@@ -414,7 +429,7 @@ function HoverButton() {
 
 function Newsletter() {
   return (
-    <section className="newsletter">
+    <section className="newsletter" id="newsletter">
       <div>
         <h2>Newsletter</h2>
         <div className="newsletter-sub">
@@ -463,7 +478,7 @@ function Newsletter() {
 
 function WhatPeopleSay() {
   return (
-    <section className="review-section">
+    <section className="review-section" id="what-others-say">
       <h2>What others say</h2>
       <div className="peoplesay-box">
         <div className="flexnamebox">
@@ -526,7 +541,7 @@ function WhatPeopleSay() {
 
 function Investments() {
   return (
-    <section>
+    <section id="investments">
       <h2>Investments</h2>
       <div>
         <ul className="project-list">
@@ -547,7 +562,7 @@ function Investments() {
 
 function Socials() {
   return (
-    <section>
+    <section id="social">
       <h2>Socials</h2>
       <div>
         <ul className="socials-list">
