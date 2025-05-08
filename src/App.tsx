@@ -36,31 +36,31 @@ const projects = [
   {
     id: 1,
     name: "www.animogifts.com",
-    description: "An ecommerce website built with Wordpress, Vanilla JS, PHP and paystack API to handle payments..Mobile responsive✅",
+    description: "An ecommerce website built with Wordpress, Vanilla JS and PHP",
     image: "/8.png",
   },
   {
     id: 2,
     name: "https://to-do-app-ten-jade.vercel.app/",
-    description: "A to-do website built with React.. Mobile responsive✅",
+    description: "A to-do website built with React.",
     image: "/check-list.png",
   },
   {
     id: 3,
     name: "https://usepopcorn-snowy.vercel.app/",
-    description: "A IMBD clone where users can search and rate movies, built with react..Mobile responsive❌",
+    description: "A React IMBD clone where users can search and rate movies, Mobile responsive❌",
     image: "clapperboard.png",
   },
   {
     id: 4,
     name: "https://sneakers-shop-mu.vercel.app/",
-    description: "A shoe ecommerce site, built with Vanilla JS ..Mobile responsive✅",
+    description: "A shoe ecommerce site, built with Vanilla JS.",
     image: "shoes.png",
   },
   {
     id: 5,
     name: "https://consultancysite.vercel.app/",
-    description: "A consultancy site, built with HTML and CSS ..Mobile responsive✅",
+    description: "A consultancy site, built with HTML and CSS ",
     image: "imagenew.png",
   },
 ];
