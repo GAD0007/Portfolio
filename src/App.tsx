@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import { ReactNode } from "react";
 import { useState } from "react";
+import ScrollToTop from "./ScrollToTop";
 
 interface ResusableButtonProps {
   children: ReactNode;
@@ -18,7 +19,6 @@ const sections = [
   { name: "What Others Say", id: "what-others-say" },
   { name: "Investments", id: "investments" },
   { name: "Social", id: "social" },
-  
 ];
 
 const works = [
@@ -36,7 +36,8 @@ const projects = [
   {
     id: 1,
     name: "www.animogifts.com",
-    description: "An ecommerce website built with Wordpress, Vanilla JS and PHP",
+    description:
+      "An ecommerce website built with Wordpress, Vanilla JS and PHP",
     image: "/8.png",
   },
   {
@@ -48,7 +49,8 @@ const projects = [
   {
     id: 3,
     name: "https://usepopcorn-snowy.vercel.app/",
-    description: "A React IMBD clone where users can search and rate movies, Mobile responsive❌",
+    description:
+      "A React IMBD clone where users can search and rate movies, Mobile responsive❌",
     image: "clapperboard.png",
   },
   {
@@ -179,6 +181,7 @@ function App() {
 
   return (
     <>
+     <ScrollToTop />
       <div className="body">
         <div className="flex-body">
           <Sidebar />
@@ -224,7 +227,6 @@ function Sidebar() {
     </>
   );
 }
-
 
 // function Sidebar() {
 //   return (
@@ -284,9 +286,9 @@ function Home() {
         </h1>
         <p>
           Adejumo Ibukun is a frontend developer with a strong blend of
-          creativity and technical expertise. I specialize in building
-          visually engaging, user-focused interfaces and turning design ideas
-          into responsive, interactive web experiences.
+          creativity and technical expertise. I specialize in building visually
+          engaging, user-focused interfaces and turning design ideas into
+          responsive, interactive web experiences.
         </p>
 
         <div className="flex-btn-container">
@@ -400,22 +402,21 @@ function NavList({ closeSidebar }: NavListProps) {
   );
 }
 
-
 function ProjectList() {
   return (
     <ul className="project-list">
       {projects.map((project) => (
         <li key={project.id} className="project-item">
-            <a className="project-link" href={`${project.name}`}>
-          <img
-            src={project.image}
-            alt={project.name}
-            className="project-image"
-          />
-          <div className="project-description">
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-          </div>
+          <a className="project-link" href={`${project.name}`}>
+            <img
+              src={project.image}
+              alt={project.name}
+              className="project-image"
+            />
+            <div className="project-description">
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </div>
           </a>
         </li>
       ))}
