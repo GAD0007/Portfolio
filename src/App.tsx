@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 import { ReactNode } from "react";
 import { useState } from "react";
-import ScrollToTop from "./ScrollToTop";
+
 
 interface ResusableButtonProps {
   children: ReactNode;
@@ -181,12 +181,12 @@ function App() {
 
   return (
     <>
-     <ScrollToTop />
+  
       <div className="body">
         <div className="flex-body">
           <Sidebar />
           <MainBody />
-          {/* <MyComponent /> */}
+         
         </div>
       </div>
     </>
