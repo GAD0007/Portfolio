@@ -420,11 +420,11 @@ function Socials() {
         <ul className="socials-list">
           {socials.map((social) => (
             <li key={social.id} className="social-item">
-              <img
+              {/* <img
                 src={social.image}
                 alt={social.name}
                 className="social-image"
-              />
+              /> */}
               <div className="social-description">
                 <h3>{social.name}</h3>
                 <p>{social.description}</p>
