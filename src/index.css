@@ -51,10 +51,18 @@ ul.work-list {
 }
 
 .project-list {
-  list-style-type: none; /* Remove default bullets */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
 }
+@media (min-width: 600px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
 .main{
   padding-top: 20px;
@@ -294,18 +302,21 @@ html {
   scroll-behavior: smooth;
 }
 .project-item {
- 
-  display: flex; /* Make the <li> a flex container */
-  align-items: center; /* Align items vertically */
-  margin-bottom: 20px; /* Add spacing between list items */
-  border: 1px solid #ccc; /* Optional: Add a border for better visuals */
-  
-  border-radius: 8px; /* Optional: Add rounded corners */
+  /* Optional: add card styling */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.project-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 .project-image {
-  width: 60px; /* Set a fixed width for the image */
-  height: 60px; /* Set a fixed height for the image */
-  object-fit: cover; /* Ensure the image covers the set dimensions */
+  width: 100%; /* Set a fixed width for the image */
+  height: 200px; /* Set a fixed height for the image */
+  object-fit: fill; /* Ensure the image covers the set dimensions */
   margin-right: 15px; /* Add space between the image and description */
  
 }
@@ -317,6 +328,7 @@ html {
   flex: 1; /* Make the description take up the remaining space */
 }
 .project-description {
+  padding: 20px;
   flex: 1; /* Make the description take up the remaining space */
 }
 .news-description h3 {
@@ -331,8 +343,8 @@ html {
   color: #666; /* Adjust text color */
 }
 .project-link{
-  display: flex;
-  padding: 10px;
+  /* display: flex; */
+  /* padding: 10px; */
   text-decoration: none;
   width: 100%;
 
