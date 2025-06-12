@@ -11,6 +11,7 @@ div.body{
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
+  padding: 5px;
 }
 .dev-name{
  padding: 10px 0px;
@@ -160,11 +161,12 @@ color: rgb(187, 183, 183);
 }
 /* Grid for 2 rows and 2 columns */
 .socials-list {
+  padding-left: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
   grid-auto-rows: auto; /* Automatically determine row height */
   gap: 20px; /* Space between grid items */
-  padding: 0;
+  /* padding: 0; */
   list-style: none; /* Remove bullet points */
 }
 
