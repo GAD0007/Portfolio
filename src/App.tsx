@@ -4,7 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import "./App.css";
 
 const sections = [
-  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
   { name: "Skills", id: "skills" },
   { name: "Live Projects", id: "projects" },
   { name: "Experience", id: "Experience" },
@@ -164,7 +164,7 @@ function Sidebar() {
 function MainBody() {
   return (
     <div className="main">
-      <Home />
+      <About />
       <WorkCard />
       <Projects />
       <Experience />
@@ -173,9 +173,9 @@ function MainBody() {
     </div>
   );
 }
-function Home() {
+function About() {
   return (
-    <section className="home" id="home">
+    <section className="home" id="about">
       <div>
         <div className="online-box">
           <div>
