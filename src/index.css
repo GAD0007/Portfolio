@@ -50,6 +50,38 @@ ul.work-list {
   padding: 25px 15px; /* Remove default padding */
   margin: 0; /* Remove default margin */
 }
+.work-list-container {
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  ul.work-list {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+  .work-scroll-bar-bg {
+    position: relative;
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    margin: 0 10px 0 10px;
+    width: calc(100% - 20px);
+    overflow: hidden;
+  }
+  .work-scroll-bar-fg {
+    height: 100%;
+    background: #4e4e4e;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.2s;
+  }
+}
 
 .project-list {
   display: grid;
