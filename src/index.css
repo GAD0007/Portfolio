@@ -54,6 +54,15 @@ ul.work-list {
   position: relative;
   width: 100%;
 }
+@media (max-width: 750px) {
+  ul.work-list {
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE and Edge */
+  }
+  ul.work-list::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Opera */
+  }
+}
 
 @media (max-width: 750px) {
   ul.work-list {
@@ -63,16 +72,18 @@ ul.work-list {
     gap: 20px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
   }
   .work-scroll-bar-bg {
+       /* padding-top: 30px; */
     position: relative;
-    height: 4px;
-    background: #e0e0e0;
-    border-radius: 2px;
-    margin: 0 10px 0 10px;
-    width: calc(100% - 20px);
+    height: 10px;
+    background: #bdb9b9;
+    border-radius: 2px 2px 2px 2px;
+    /* margin: 10px 0px 0 0px; */
+    width: 100%;
     overflow: hidden;
+    bottom: 10px;
   }
   .work-scroll-bar-fg {
     height: 100%;
