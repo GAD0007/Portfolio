@@ -1,11 +1,5 @@
 // import { useState } from 'react'
-import { ReactNode } from "react";
 import React, { useRef, useEffect, useState } from "react";
-
-interface ResusableButtonProps {
-  children: ReactNode;
-  className?: string;
-}
 
 import "./App.css";
 
@@ -98,8 +92,6 @@ const socials = [
   },
 ];
 
-
-
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -175,7 +167,7 @@ function MainBody() {
       <Home />
       <WorkCard />
       <Projects />
-       <Experience />
+      <Experience />
       <Education />
       <Contact />
     </div>
@@ -193,29 +185,24 @@ function Home() {
               className="home-image"
             />
           </div>
-          <div>Accepting new projects</div>
-          <div>
-            {" "}
-            <button className="Contact"> Start a project</button>
-          </div>
+          <div className="available">Available for work</div>
         </div>
-        <h1 className="intro-header">
-          Designing products
-          <span className="gray-text"> and building digital businesses</span>
-        </h1>
+       <h1 className="intro-header">
+  Building modern interfaces
+  <span className="gray-text"> and seamless web experiences</span>
+</h1>
         <p>
-          Adejumo Ibukun is a frontend developer with a strong blend of
-          creativity and technical expertise. I specialize in building visually
-          engaging, user-focused interfaces and turning design ideas into
-          responsive, interactive web experiences.
+          With a strong background in frontend development, I have consistently
+          demonstrated my proficiency in building intuitive user interfaces and
+          delivering high-quality web applications. My hands-on experience with
+          React and NextJS has allowed me to tackle complex challenges and drive
+          impactful results. </p>
+          
+          <p>My track record of successfully collaborating with
+          cross-functional teams and my commitment to continuous improvement
+          make me a valuable asset to any organization seeking to elevate its
+          frontend development capabilities.
         </p>
-
-        <div className="flex-btn-container">
-          <ResusableButton className={`primary-btn1`}>
-            Lets's start a project
-          </ResusableButton>
-          <ResusableButton className={`Contact2`}>Contact</ResusableButton>
-        </div>
       </div>
     </section>
   );
@@ -232,11 +219,6 @@ function Projects() {
   );
 }
 
-function ResusableButton({ children, className }: ResusableButtonProps) {
-  return (
-    <button className={`resusable-button ${className}`}>{children}</button>
-  );
-}
 function WorkCard() {
   const listRef = useRef<HTMLUListElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
@@ -253,24 +235,24 @@ function WorkCard() {
   }, []);
 
   // Update progress bar width on scroll
-useEffect(() => {
-  if (!showBar) return;
-  const list = listRef.current;
-  const bar = barRef.current;
-  if (!list || !bar) return;
+  useEffect(() => {
+    if (!showBar) return;
+    const list = listRef.current;
+    const bar = barRef.current;
+    if (!list || !bar) return;
 
-  function updateBar() {
-    if (!list || !bar) return; // <-- Add this null check
-    const maxScroll = list.scrollWidth - list.clientWidth;
-    const percent = maxScroll > 0 ? (list.scrollLeft / maxScroll) * 100 : 0;
-    bar.style.width = percent + "%";
-  }
+    function updateBar() {
+      if (!list || !bar) return; // <-- Add this null check
+      const maxScroll = list.scrollWidth - list.clientWidth;
+      const percent = maxScroll > 0 ? (list.scrollLeft / maxScroll) * 100 : 0;
+      bar.style.width = percent + "%";
+    }
 
-  list.addEventListener("scroll", updateBar);
-  updateBar();
+    list.addEventListener("scroll", updateBar);
+    updateBar();
 
-  return () => list.removeEventListener("scroll", updateBar);
-}, [showBar]);
+    return () => list.removeEventListener("scroll", updateBar);
+  }, [showBar]);
   return (
     <section id="skills">
       <div>
