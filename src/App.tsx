@@ -126,7 +126,7 @@ function Sidebar() {
         </button>
 
         <div className="profile-box">
-          <img src="/dp.png" alt="display picture" />
+          
           <div className="name-titile">
             <div className="dev-name">Adejumo Ibukun</div>
             <div className="dev-role">Web Developer</div>
@@ -194,9 +194,7 @@ function Home() {
         <p>
           With a strong background in frontend development, I have consistently
           demonstrated my proficiency in building intuitive user interfaces and
-          delivering high-quality web applications. My hands-on experience with
-          React and NextJS has allowed me to tackle complex challenges and drive
-          impactful results. </p>
+          delivering high-quality web applications.</p>
           
           <p>My track record of successfully collaborating with
           cross-functional teams and my commitment to continuous improvement
