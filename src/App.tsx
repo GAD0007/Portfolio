@@ -27,30 +27,36 @@ const works = [
 const projects = [
   {
     id: 1,
-    name: "https://animogifts.com",
-    description: "Animo Gifts",
-    image: "/animo1.png",
+    name: "https://home-radar-ruby.vercel.app/",
+    description: "HomeRadar",
+    image: "/homeradar.png",
+  },
+   {
+    id: 2,
+    name: "https://www.switchonline.xyz/",
+    description: "SwitchOnline",
+    image: "/switch.jpg",
   },
   {
-    id: 2,
+    id: 3,
     name: "https://to-do-app-ten-jade.vercel.app/",
     description: "To-do List",
     image: "/animo2.png",
   },
   {
-    id: 3,
+    id: 4,
     name: "https://usepopcorn-snowy.vercel.app/",
     description: "IMBD clone  (PC and Tablet view only)",
     image: "/animo3.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "https://sneakers-shop-mu.vercel.app/",
     description: "shoepify",
     image: "/animo4.png",
   },
   {
-    id: 5,
+    id: 6,
     name: "https://consultancysite.vercel.app/",
     description: "Redella Landing Page",
     image: "/animo5.png",
