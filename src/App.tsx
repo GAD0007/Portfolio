@@ -39,24 +39,30 @@ const projects = [
   },
   {
     id: 3,
+    name: "https://www.shuttlers.co/products/voucher",
+    description: "Shuttlers",
+    image: "/Shuttlers.png",
+  },
+  {
+    id: 4,
     name: "https://to-do-app-ten-jade.vercel.app/",
     description: "To-do List",
     image: "/animo2.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "https://usepopcorn-snowy.vercel.app/",
     description: "IMBD clone  (PC and Tablet view only)",
     image: "/animo3.png",
   },
   {
-    id: 5,
+    id: 6,
     name: "https://sneakers-shop-mu.vercel.app/",
     description: "shoepify",
     image: "/animo4.png",
   },
   {
-    id: 6,
+    id: 7,
     name: "https://consultancysite.vercel.app/",
     description: "Redella Landing Page",
     image: "/animo5.png",
