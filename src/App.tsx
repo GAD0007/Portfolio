@@ -22,6 +22,7 @@ const works = [
   { id: 7, Poster: "css.png", Title: "CSS", Year: "2021" },
   { id: 8, Poster: "php.png", Title: "PHP", Year: "2022" },
   { id: 9, Poster: "wordpress.png", Title: "WORDPRESS", Year: "2022" },
+  { id: 10, Poster: "635e171853ec7189d4683ff4c249cfa4.png", Title: "SHOPIFY", Year: "2022" }
 ];
 
 const projects = [
@@ -349,7 +350,7 @@ function Experience() {
         <div className="flexnamebox">
           <div className="boxed-names">
             <div className="name-rev">Freelance Frontend Engineer</div>
-            <div className="pos-rev">2024 - Present</div>
+            <div className="pos-rev">Present</div>
           </div>
         </div>
         <ul style={{ lineHeight: "25px" }}>
@@ -374,6 +375,28 @@ function Experience() {
       <div className="peoplesay-box">
         <div className="flexnamebox">
           <div className="boxed-names">
+            <div className="name-rev">WordPress Developer for Animo Gifts</div>
+            <div className="pos-rev">December 2024 – April 2025</div>
+          </div>
+        </div>
+        <ul style={{ lineHeight: "25px" }}>
+          <li>
+           Wrote clean, maintainable code using PHP, JavaScript, CSS, and MySQL to build high-performance WordPress sites.
+          </li>
+          <li>
+            Translated UI/UX wireframes and mockups from Figma into functional WordPress components and themes.
+          </li>
+          <li>
+          Collaborated remotely with cross-functional teams to implement user-friendly interfaces and optimize site usability.
+          </li>
+          <li>
+            Integrated essential WordPress plugins and customized them to support advanced theme functionalities.
+          </li>
+        </ul>
+      </div>
+      <div className="peoplesay-box">
+        <div className="flexnamebox">
+          <div className="boxed-names">
             <div className="name-rev">Frontend Engineer</div>
             <div className="pos-rev">Jet and Joe, Remote</div>
             <div className="pos-rev">January 2022 - August 2022</div>
@@ -389,7 +412,7 @@ function Experience() {
             satisfaction.
           </li>
           <li>
-            Managed full development lifecycle—from wireframing and prototyping
+            Managed full development lifecycle from wireframing and prototyping
             to deployment and maintenance.
           </li>
         </ul>
